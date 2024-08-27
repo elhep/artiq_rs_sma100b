@@ -1,0 +1,5 @@
+numpy
+sipyco
+asyncserial
+RsSmab
+pytest
