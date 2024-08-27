@@ -5,3 +5,5 @@ __pycache__/
 *.pdf
 *.out
 doc/build
+artiq_rs_sma100b.egg-info/
+build/
