@@ -9,6 +9,8 @@ COPY . .
 
 WORKDIR /usr/src/app
 
+RUN apt-get update
+
 # Install artiq_rs_sma100b module
 RUN pip install .
 
