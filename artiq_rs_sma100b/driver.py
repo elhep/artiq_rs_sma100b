@@ -51,7 +51,7 @@ class ArtiqRsSma100b(ArtiqRsSma100bInterface):
         """
         Set level of the frequency. Unit: Hz.
         """
-        self.smab.source.frequency.fixed.set_value(223e6)
+        self.smab.source.frequency.fixed.set_value(frequency)
 
     async def set_rf_on(self, rf_on):
         """
@@ -75,13 +75,13 @@ class ArtiqRsSma100b(ArtiqRsSma100bInterface):
         """
         Get boolean state of the RF output state.
         """
-        return self.smab.output.state.set_value()
+        return self.smab.output.state.get_value()
 
     async def get_power(self):
         """
         Get float level at the RF output. Unit: dBm
         """
-        return self.smab.source.power.set_power()
+        return self.smab.source.power.get_power()
 
     async def reset(self):
         """
