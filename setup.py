@@ -16,9 +16,6 @@ setup(
     name="artiq_rs_sma100b",
     install_requires=required,
     packages=find_packages(),
-    cmdclass={
-        'install': PostInstallCommand,
-    },
     entry_points={
         "console_scripts": [
             "aqctl_artiq_rs_sma100b = artiq_rs_sma100b.artiq_rs_sma100b:main",
