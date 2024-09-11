@@ -3,7 +3,7 @@ import sys
 from sipyco.test.generic_rpc import GenericRPCCase
 
 
-class GenericTdcTest:
+class GenericRsSma100bTest:
     def test_set_frequency(self):
         frequency = 5e6
         self.artiq_rs_sma100b.set_frequency(frequency)
@@ -20,7 +20,7 @@ class GenericTdcTest:
         self.assertEqual(power, self.artiq_rs_sma100b.get_power())
 
 
-class TestTdcSim(GenericRPCCase, GenericTdcTest):
+class TestRsSma100bSim(GenericRPCCase, GenericRsSma100bTest):
     def setUp(self):
         GenericRPCCase.setUp(self)
         command = (
