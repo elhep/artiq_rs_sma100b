@@ -9,9 +9,8 @@ COPY . .
 
 WORKDIR /usr/src/app
 
-RUN apt-get update
-
 # Install Rohde-Schwarz VISA
+RUN apt-get update
 RUN apt-get install -y wget
 RUN wget https://scdn.rohde-schwarz.com/ur/pws/dl_downloads/dl_application/application_notes/1dc02___rs_v/rsvisa_5.12.9_amd64.deb -O /tmp/rsvisa_5.12.9_amd64.deb
 RUN dpkg -i /tmp/rsvisa_5.12.9_amd64.deb || apt-get install -f -y
