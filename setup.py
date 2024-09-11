@@ -18,7 +18,7 @@ setup(
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "aqctl_artiq_rs_sma100b = artiq_rs_sma100b.artiq_rs_sma100b:main",
+            "aqctl_artiq_rs_sma100b = artiq_rs_sma100b.aqctl_artiq_rs_sma100b:main",
         ],
     },
 )
