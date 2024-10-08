@@ -57,7 +57,7 @@ class ArtiqRsSma100b(ArtiqRsSma100bInterface):
         """
         Set boolean state of the RF output state.
         """
-        self.smab.output.state.set_value(rf_on)
+        self.smab.output.state.set_value(bool(rf_on))
 
     async def set_power(self, power):
         """
@@ -75,7 +75,7 @@ class ArtiqRsSma100b(ArtiqRsSma100bInterface):
         """
         Get boolean state of the RF output state.
         """
-        return self.smab.output.state.get_value()
+        return int(self.smab.output.state.get_value())
 
     async def get_power(self):
         """
