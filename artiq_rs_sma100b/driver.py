@@ -90,6 +90,13 @@ class ArtiqRsSma100b(ArtiqRsSma100bInterface):
         self.smab.utilities.reset()
         self.smab.utilities.clear_status()
 
+    async def ping(self):
+        idn = self.smab.utilities.idn_string
+        if "SMA100B" in idn:
+            return True
+        else:
+            return False
+
     def close(self):
         self.smab.close()
 
