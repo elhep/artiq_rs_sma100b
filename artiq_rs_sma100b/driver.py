@@ -98,7 +98,10 @@ class ArtiqRsSma100b(ArtiqRsSma100bInterface):
             return False
 
     def close(self):
-        self.smab.close()
+        try:
+            self.smab.close()
+        except Exception as e:
+            logging.warning(f"Failed to close RsSmab connection: {e}")
 
 
 class ArtiqRsSma100bSim(ArtiqRsSma100bInterface):
